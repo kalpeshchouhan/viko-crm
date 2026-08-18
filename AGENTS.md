@@ -10,12 +10,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Project state
 
-This is a Next.js 16 (App Router) CRM project, currently at the create-next-app
-scaffold stage — `app/page.tsx` and `app/layout.tsx` still hold the default
-starter content. No CRM domain features, API routes, data layer, or tests
-exist yet. A full library of shadcn/ui primitives has been installed in
-`components/ui/` in anticipation of building the UI, but nothing in `app/`
-consumes them yet.
+This is a Next.js 16 (App Router) CRM project. The app is gated behind Clerk
+authentication (`proxy.ts` + resource-based `auth.protect()` calls, see
+`docs/adr/0002-resource-based-auth-checks.md`); `/sign-in` and `/sign-up` are
+embedded Clerk components styled with shadcn tokens, and `/` is a minimal CRM
+dashboard shell. No other CRM domain features, API routes, data layer, or
+tests exist yet. A full library of shadcn/ui primitives has been installed in
+`components/ui/` in anticipation of building the rest of the UI.
 
 ## Commands
 
